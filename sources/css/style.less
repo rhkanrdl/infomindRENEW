@@ -1218,47 +1218,59 @@ body {
                 .rem(height, 180);
 
                 @media all and (min-width: 1200px) {
+                    .relative;
                     padding:80px 0 0;
                     height:270px;
                 }
 
-                h2 {
-                    .inline-block;
-                    .rem(font-size, 26);
-                    .rem(margin, 40 0 0);
+                .container {
+                    .center;
 
                     @media all and (min-width: 1200px) {
-                        font-size:66px;
-                        margin:50px 40px 0 30px;
-                        .light;
+                        .left;
                     }
-                }
 
-                ul.sub-menu {
-                    .none;
+                    h2 {
+                        .rem(font-size, 26);
+                        .rem(margin, 40 0 0);
 
-                    @media all and (min-width: 1200px) {
-                        .inline-block;
-                        .top;
-                        .no-list;
-                        .mapazero;
-                        .zero;
-                        margin:70px 0 0;
-
-                        li {
+                        @media all and (min-width: 1200px) {
                             .inline-block;
+                            font-size:66px;
+                            margin:50px 40px 0 30px;
+                            .light;
+                        }
+                    }
 
-                            a {
-                                font-size:20px;
-                                padding:0 14px 20px;
+                    ul.sub-menu {
+                        .none;
 
-                                border-bottom:3px solid #fff;
+                        @media all and (min-width: 1200px) {
+                            .inline-block;
+                            .top;
+                            .no-list;
+                            .mapazero;
+                            .zero;
+                            .absolute;
+                            right:30px;
+                            top:70px;
 
-                                &:hover,
-                                &.active {
-                                    border-color:#333;
+                            li {
+                                .inline-block;
+
+                                a {
+                                    font-size:20px;
+                                    padding:0 18px 20px;
+
+                                    border-bottom:3px solid #fff;
+
+                                    &:hover,
+                                    &.active {
+                                        border-color:#333;
+                                        .bolder;
+                                    }
+
                                 }
-
                             }
                         }
                     }
