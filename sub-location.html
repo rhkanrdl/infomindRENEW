@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="INFOMIND">
+        <title>INFOMIND</title>
+        <link href="sources/css/style.css" rel="stylesheet">
+        <!-- javaScript -->
+        <script src="sources/js/jquery-1.11.3.min.js"></script>
+        <script src="sources/js/slick.min.js"></script>
+        <script src="sources/js/common.js"></script>
+    </head>
+
+    <body class="sub">
+        <!-- S:skip_navi -->
+        <div class="skip_navi">
+            <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
+            <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
+        </div>
+        <!-- E:skip_navi -->
+        <!-- S:header -->
+        <header id="header" class="fit">
+            <div class="container">
+                <h1>
+                    <a href="/">(주)인포마인드</a>
+                </h1>
+                <button class="allmenu">
+                    <i class='bx bx-menu-alt-right'></i>전체메뉴보기</button>
+            </div>
+
+            <!-- S:main_menu -->
+            <nav id="main-menu">
+                <ul>
+                    <li>
+                        <h2>
+                            <a href="">회사소개</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">INFOMIND</a>
+                            </li>
+                            <li>
+                                <a href="">CEO</a>
+                            </li>
+                            <li>
+                                <a href="">연혁</a>
+                            </li>
+                            <li>
+                                <a href="">조직도</a>
+                            </li>
+                            <li>
+                                <a href="">찾아오시는길</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">사업소개</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">Bigdata</a>
+                            </li>
+                            <li>
+                                <a href="">Blockchain</a>
+                            </li>
+                            <li>
+                                <a href="">Smartfarm</a>
+                            </li>
+                            <li>
+                                <a href="">WEB/SI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">제품소개</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">inPOS</a>
+                            </li>
+                            <li>
+                                <a href="">inCMS</a>
+                            </li>
+                            <li>
+                                <a href="">SwingPUTT</a>
+                            </li>
+                            <li>
+                                <a href="">JoyPUTT</a>
+                            </li>
+                            <li>
+                                <a href="">Gateway</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">사업실적</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">Portpolio</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">고객센터</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">보도자료</a>
+                            </li>
+                            <li>
+                                <a href="">언론보도</a>
+                            </li>
+                            <li>
+                                <a href="">온라인상담</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button class="close">
+                    <i class='bx bx-x-circle'></i>이전슬라이드</button>
+            </nav>
+            <!-- E:main_menu -->
+
+        </header>
+        <!-- E:header -->
+        <!-- S:mainContent -->
+        <div id="content" class="sub">
+            <section class="sub-header">
+                <div class="container">
+                        <h2 class="sr-only">서브페이지 컨텐츠</h2>
+                    <!-- <ul class="navigation">
+                        <li class="home">
+                            <a href="/">
+                                <i class="bx bx-home"></i>home</a>
+                        </li>
+
+                        <li>
+                            <a href="">회사소개</a>
+                            <i class="bx bx-chevron-right"></i>
+                        </li>
+
+                        <li>
+                            <a href="">인포마인드</a>
+                            <i class="bx bx-chevron-right"></i>
+                        </li>
+
+                    </ul>
+
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">INFOMIND</a>
+                        </li>
+                        <li>
+                            <a class="active
+                            " href="">CEO</a>
+                        </li>
+                        <li>
+                            <a href="">연혁</a>
+                        </li>
+                        <li>
+                            <a href="">조직도</a>
+                        </li>
+                        <li>
+                            <a href="">찾아오시는길</a>
+                        </li>
+                    </ul>
+ -->
+                    <wp:include id="POST000000000000042"/>
+                    <wp:include id="POST000000000000023"/>
+                </div>
+
+            </section>
+            <section class="sub-content location">
+                <div class="container">
+
+                    <h3>오시는길</h3>
+
+                    <div id="map">
+
+                    </div>
+
+
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=966f93010e6d2067ac4abaff550c7502"></script>
+                    <script>
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                        mapOption = { 
+                            center: new daum.maps.LatLng(33.50425998784217, 126.51965121974186), // 지도의 중심좌표
+                            level: 3 // 지도의 확대 레벨
+                        };
+                    
+                    var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                    
+                    // 마커가 표시될 위치입니다 
+                    var markerPosition  = new daum.maps.LatLng(33.50425998784217, 126.51965121974186); 
+                    
+                    // 마커를 생성합니다
+                    var marker = new daum.maps.Marker({
+                        position: markerPosition
+                    });
+                    
+                    // 마커가 지도 위에 표시되도록 설정합니다
+                    marker.setMap(map);
+                    
+                    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+                    // marker.setMap(null);    
+                    </script>
+
+
+
+
+                    <h4>인포마인드 주소</h4>
+                    <p class="address">
+                        <span>제주특별자치도 제주시 삼도일동 530 제동해피죤 807호</span>
+                        <span>기업부설연구소 : 제주특별자치도 제주시 삼도일동 530 제동해피죤 707호</span>
+                    </p>
+                    <p class="tel">
+                        <span>TEL. 064-712-4787</span>
+                        <span>FAX. 064-712-4786</span>
+                    </p>
+
+                    <h4>차량/택시 이용시</h4>
+                    <p class="route">
+                        제주국제공항 → 월성사거리 진입(월성로 신제주방면으로 우회전) → 오라오거리 진입(적십자회관방면으로 좌회전) → 전농로 적십자회관방면으로 우회전
+ → (주)인포마인드 (제주국제공항에서 15분 정도가 소요됩니다.)
+                    </p>
+
+
+                </div>
+            </section>
+
+        </div>
+        <!-- E:mainContent -->
+        <!-- S:footer -->
+        <footer id="footer">
+            <div class="container">
+                <h2>ⓒ INFOMIND</h2>
+                <address>
+                    <p>제주특별자치도 제주시 삼도일동 530 제동해피죤 제7층 제807호 (주)인포마인드</p>
+                    <p>TEL 064)712-4787 | FAX 064)712-4786</p>
+
+                </address>
+            </div>
+        </footer>
+        <!-- E:footer -->
+    </body>
+
+</html>
