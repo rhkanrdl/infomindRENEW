@@ -136,6 +136,7 @@ $(document).ready(function() {
       gutter:'.gutter-sizer'
     });
 
+
   });
 
 
@@ -151,6 +152,7 @@ $(document).ready(function() {
         percentPosition: true,
         gutter:'.gutter-sizer'
       });
+
 
 
     } else {
