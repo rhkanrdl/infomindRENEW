@@ -154,6 +154,12 @@
     .rem(margin, 20 0 30);
     width: 100%;
 
+    &.dark {
+        background:#292929;
+        margin:0;
+        .rem(padding, 30 0);
+    }
+
     a {
         background: @white;
     }
@@ -370,13 +376,6 @@ a {
     text-decoration: none;
     color: #333;
 }
-/*font*/
-html {
-    min-width: @min-width;
-    max-width: 100%;
-    font-size: 14px;
-    min-height: 100%;
-}
 
 @media (max-width:360px) {
     html {
@@ -385,12 +384,12 @@ html {
 }
 @media (min-width:361px) and (max-width:480px) {
     html {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 @media (min-width:481px) {
     html {
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 @media (min-width:1200px) {
@@ -481,6 +480,21 @@ body {
                     background: url("@{img-url}/logo-c.svg") no-repeat center top / 100% 200%;
                 }
             }
+
+            a.language {
+
+                .absolute;
+                .rem(top, 22);
+                .rem(right, 56);
+                color:#fff;
+
+                @media all and (min-width: 1200px) {
+
+                    right:66px;
+                    top:50px;
+                }
+            }
+            
             button.allmenu {
                 .absolute;
                 .rem(right, 10);
@@ -606,7 +620,7 @@ body {
                         .inline-block;
                         .relative;
                         .top;
-                        width: 140px;
+                        // width: 140px;
                         padding-bottom: 10000px;
                         margin-bottom: -10000px;
 
@@ -617,7 +631,8 @@ body {
                         }
 
                         h2 {
-                            .mapazero;
+                            margin:0;
+                            padding:0 30px;
                             .center;
 
                             a {
@@ -703,6 +718,14 @@ body {
                         background-position: center bottom;
                     }
                 }
+                a.language {
+                    color:#333;
+
+                    @media all and (min-width: 1200px) {
+                        top:32px;
+                    }
+                }
+
                 button.allmenu {
 
                     @media all and (min-width: 1200px) {
@@ -1206,7 +1229,7 @@ body {
                         .block;
                         .rem(width, 227.32);
                         .rem(height, 46.03);
-                        .rem(margin, -10 auto 0);
+                        .rem(margin, 4 auto 0);
                         background: url("@{img-url}/logo.svg") no-repeat center / 100% auto;
 
                         @media all and (min-width: 1200px) {
@@ -1343,10 +1366,13 @@ body {
 
                                     border-bottom: 3px solid #D0D0D0;
 
-                                    &.active,
-                                    &:hover {
+                                    &.active {
                                         border-color: #333;
-                                        .bolder;
+                                    }
+
+                                    &:hover {
+                                        border-color: #2583C8;
+                                        color:#2583C8;
                                     }
 
                                 }
@@ -1603,7 +1629,7 @@ body {
                                 padding: 30px 30px 20px;
                                 margin: 0;
                                 width: 650px;
-                                height: 204px;
+                                height: 224px;
                             }
 
                             dt {
@@ -1611,7 +1637,7 @@ body {
 
                                 @media all and (min-width: 1200px) {
                                     float: left;
-                                    width: 110px;
+                                    width: 146px;
                                 }
                             }
 
@@ -1620,7 +1646,7 @@ body {
                                 word-break: keep-all;
 
                                 @media all and (min-width: 1200px) {
-                                    margin: 0 0 6px;
+                                    margin: 0 0 6px 156px;
                                 }
                             }
                         }
@@ -1637,7 +1663,7 @@ body {
                             @media all and (min-width: 1200px) {
                                 .top;
                                 width: 550px;
-                                height: 204px;
+                                height: 224px;
 
                                 margin: 0;
                             }
@@ -1962,6 +1988,18 @@ body {
                                     }
                                 }
                             }
+
+                            &.en {
+                                dl {
+                                    dt {
+                                        
+
+                                        @media all and (min-width: 1200px) {
+                                            height: 300px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2008,6 +2046,12 @@ body {
                                 .block;
                                 .rem(padding, 0 0 6);
                             }
+
+                            &.en {
+                                @media all and (min-width: 1200px) {
+                                    height: 160px;
+                                }
+                            }
                         }
 
                         p.tel {
@@ -2030,6 +2074,12 @@ body {
                             span {
                                 .block;
                                 .rem(padding, 0 0 6);
+                            }
+
+                            &.en {
+                                @media all and (min-width: 1200px) {
+                                    height: 160px;
+                                }
                             }
                         }
 
@@ -2096,7 +2146,7 @@ body {
                                 @media all and (min-width: 1200px) {
                                     width: 170px;
                                     font-size: 16px;
-                                    padding: 40px 0 120px;
+                                    padding: 40px 4px 120px;
                                 }
 
                                 i {
@@ -2998,6 +3048,145 @@ body {
                                 .top;
                             }
 
+                            p {
+                                .absolute;
+                                .mapazero;
+                                left:50%;
+                                .rem(font-size, 10);
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:14px;
+                                }
+
+                                &.name01 {
+                                    .rem(top,60);
+                                    .rem(margin-left, -126);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:160px;
+                                        margin-left:-230px;
+                                    }
+
+                                    &::before {
+                                        content:"- ";
+                                    }
+                                }
+
+                                &.name02 {
+                                    .rem(top, 75);
+                                    .rem(margin-left, -126);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:180px;
+                                        margin-left:-230px;
+                                    }
+
+                                    &::before {
+                                        content:"- ";
+                                    }
+                                }
+
+                                &.name03 {
+                                    .rem(top, 90);
+                                    .rem(margin-left, -126);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:200px;
+                                        margin-left:-230px;
+                                    }
+
+                                    &::before {
+                                        content:"- ";
+                                    }
+                                }
+
+                                &.name04 {
+                                    .rem(top, 105);
+                                    .rem(margin-left, -126);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:220px;
+                                        margin-left:-230px;
+                                    }
+
+                                    &::before {
+                                        content:"- ";
+                                    }
+                                }
+
+                                &.name05 {
+                                    .rem(top, 120);
+                                    .rem(margin-left, -126);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:240px;
+                                        margin-left:-230px;
+                                    }
+
+                                    &::before {
+                                        content:"- ";
+                                    }
+                                }
+
+                                &.name06 {
+                                    .rem(top, 135);
+                                    .rem(margin-left, -126);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:260px;
+                                        margin-left:-230px;
+                                    }
+
+                                    &::before {
+                                        content:"- ";
+                                    }
+                                }
+
+
+                                &.name07 {
+                                    .rem(top, 30);
+                                    .rem(margin-left, 10);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:64px;
+                                        margin-left:20px;
+                                    }
+                                }
+
+
+                                &.name08 {
+                                    .rem(top, 100);
+                                    .rem(margin-left, 64);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:204px;
+                                        margin-left:130px;
+                                    }
+                                }
+
+
+                                &.name09 {
+                                    .rem(top, 140);
+                                    .rem(margin-left, 74);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:290px;
+                                        margin-left:150px;
+                                    }
+                                }
+
+
+                                &.name10 {
+                                    .rem(top, 166);
+                                    .rem(margin-left, 10);
+
+                                    @media all and (min-width: 1200px) {
+                                        top:338px;
+                                        margin-left:20px;
+                                    }
+                                }
+                            }
+
 
                             h5 {
                                 color:#fff;
@@ -3079,17 +3268,20 @@ body {
                                 u {
                                     .absolute;
                                     text-decoration:none;
-                                    .zero;
                                     .rem(top, -64);
                                     .inline-block;
                                     .rem(width, 70);
                                     .rem(height, 70);
+                                    color:#0075bc;
+                                    .center;
+                                    .rem(padding-top, 34);
                                     background: url("@{img-url}/home.svg") no-repeat center / 100% auto;
 
                                     @media all and (min-width: 1200px) {
                                         width:130px;
                                         height:130px;
                                         top:-116px;
+                                        padding-top:60px;
                                     }
                                 }
                             }
@@ -3372,9 +3564,8 @@ body {
                                             height:100%;
                                             max-height:40px;
                                             .center;
-                                            .flex;
                                             color:#ccc;
-                                            .ani(0.5s);
+                                            .ani(0.1s);
                                             word-break:keep-all;
                                             .ellipse;
                                         }
@@ -3384,6 +3575,7 @@ body {
                                         h4 {
 
                                             @media all and (min-width: 1200px) {
+                                                .flex;
                                                 background:rgba(255,255,255,0.9);
                                                 height:100%;
                                                 max-height:1000px;
@@ -3410,27 +3602,19 @@ body {
                                 word-break: keep-all;
 
                                 @media all and (min-width: 1200px) {
-                                    .left;
-                                    font-size: 36px;
+                                    font-size: 32px;
                                 }
 
                                 small {
                                     .block;
-                                    .rem(width, 140);
                                     .rem(margin, 6 auto 0);
                                     .rem(font-size, 14);
                                     font-style: normal;
-                                    background: #eee;
                                     color: #2583C8;
                                     .rem(padding, 2 0);
-                                    .rem(border-radius, 4);
 
                                     @media all and (min-width: 1200px) {
-                                        .center;
-                                        float: right;
                                         margin: 16px 0 0;
-                                        padding: 6px 20px;
-                                        width: auto;
                                         font-size: 18px;
                                     }
 
