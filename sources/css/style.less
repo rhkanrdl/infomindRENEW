@@ -1,18 +1,18 @@
 // out: ./style.css, compress: true, sourceMap: false
 
-@import "rem.less";
-@import "/wp/assets/source/css/normalize.css";
-@import "/wp/assets/source/css/nanumsquare.css";
-//Regular(400), Bold(700), Extra Bold(800), Light(300)
-@import "/wp/assets/source/css/boxicons.css";
-
-
-
-// @import "normalize.css";
 // @import "rem.less";
-// @import "nanumsquare.css";
+// @import "/wp/assets/source/css/normalize.css";
+// @import "/wp/assets/source/css/nanumsquare.css";
 // //Regular(400), Bold(700), Extra Bold(800), Light(300)
-// @import "boxicons.css";
+// @import "/wp/assets/source/css/boxicons.css";
+
+
+
+@import "normalize.css";
+@import "rem.less";
+@import "nanumsquare.css";
+//Regular(400), Bold(700), Extra Bold(800), Light(300)
+@import "boxicons.css";
 
 
 
@@ -20,8 +20,8 @@
 /* basic */
 @min-width: 320px;
 @myfont: "NanumSquare";
-// @img-url: "../images";
-@img-url: "/wp/assets/source/images";
+@img-url: "../images";
+// @img-url: "/wp/assets/source/images";
 
 
 @header-height: 100px;
@@ -2846,14 +2846,15 @@ body {
                         .zero;
 
                         h4 {
-                            .inline-block;
+                            .center;
+                            .block;
                             color:#fff;
                             .rem(font-size, 20);
                             .rem(margin, 20 auto 20);
 
                             small {
 
-                                .rem(margin, 0 0 20);
+                                .rem(margin, 0 auto 20);
                                 .block;
                                 .zero;
                                 .rem(width, 238);
@@ -2866,6 +2867,19 @@ body {
                                     width:377.18px;
                                     height:108px;
                                 }
+                            }
+                        }
+
+                        video {
+                            width: 100%;
+                            min-width: 100%;
+                            min-height: 100%;
+
+                            @media all and (min-width: 1200px) {
+                                min-width: 640px;
+                                min-height: 360px;
+                                width: auto;
+                                height: auto;
                             }
                         }
 
