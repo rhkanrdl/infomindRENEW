@@ -118,7 +118,7 @@ $(document).ready(function() {
 
 
     $('.main-slider div').each(function() {
-        $(this).css("background", "url('" + $(this).find("img").attr("src") + "') no-repeat top / cover");
+        $(this).css("background", "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover");
     });
 
     $('body.main .news p.img').each(function() {

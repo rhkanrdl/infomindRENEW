@@ -10,18 +10,19 @@
 
 @import "normalize.css";
 @import "rem.less";
-@import "nanumsquare.css";
+
+
+
+// @import "nanumsquare.css";
 //Regular(400), Bold(700), Extra Bold(800), Light(300)
 @import "boxicons.css";
 
 
-
-
 /* basic */
 @min-width: 320px;
-@myfont: "NanumSquare";
-@img-url: "../images";
-// @img-url: "/wp/assets/source/images";
+@myfont: "Noto Sans KR";
+// @img-url: "../images";
+@img-url: "/wp/assets/source/images";
 
 
 @header-height: 100px;
@@ -377,25 +378,9 @@ a {
     color: #333;
 }
 
-@media (max-width:360px) {
-    html {
-        font-size: 14px;
-    }
-}
-@media (min-width:361px) and (max-width:480px) {
-    html {
-        font-size: 16px;
-    }
-}
-@media (min-width:481px) {
-    html {
-        font-size: 18px;
-    }
-}
-@media (min-width:1200px) {
-    html {
-        font-size: 14px;
-    }
+
+html {
+    font-size: 14px;
 }
 
 body {
@@ -611,7 +596,7 @@ body {
                     .absolute;
                     .hidden;
                     left: 50%;
-                    top: 44px;
+                    top: 48px;
                     margin-left: -300px;
                     .zero;
                     .ani(1s);
@@ -637,7 +622,7 @@ body {
 
                             a {
                                 color: #fff;
-                                font-size: 22px;
+                                font-size: 18px;
                             }
                         }
 
@@ -845,8 +830,8 @@ body {
             section.main-issue {
                 .relative;
                 color: #fff;
-                height: 100vh;
-                .rem(min-height, 600);
+                height: calc(100vh - 200px);
+                .rem(min-height, 460);
                 .hidden;
 
                 @media all and (min-width: 1200px) {
@@ -862,14 +847,15 @@ body {
                     div {
                         .relative;
                         width: 100%;
-                        height: 100vh;
-                        .rem(min-height, 600);
+                        height: calc(100vh - 200px);
+                        .rem(min-height, 460);
                         .inline-block;
                         .top;
 
                         @media all and (min-width: 1200px) {
                             height: 70vh;
                             min-height: 720px;
+                            .left;
                         }
 
                         &::before {
@@ -888,12 +874,15 @@ body {
                             .relative;
                             z-index: 100;
                             .rem(font-size, 28);
-                            margin-top: 30vh;
+                            margin-top: 26vh;
                             .rem(margin-bottom, 20);
 
                             @media all and (min-width: 1200px) {
-                                margin-top: 26vh;
-                                font-size: 62px;
+                                width:1100px;
+                                margin: 26vh auto 20px;
+                                font-size: 68px;
+                                font-weight:100;
+                                letter-spacing:-2px;
                             }
 
                             u {
@@ -905,6 +894,11 @@ body {
                                 }
 
                             }
+
+                            strong {
+                                font-weight:inherit;
+                                color:#F99900;
+                            }
                         }
 
                         p {
@@ -915,7 +909,9 @@ body {
                             line-height: 1.4;
 
                             @media all and (min-width: 1200px) {
-                                font-size: 16px;
+                                font-size: 18px;
+                                width:1100px;
+                                margin:0 auto;
                             }
 
                             u {
@@ -941,11 +937,30 @@ body {
                             .rem(margin, 20 0 0);
 
                             @media all and (min-width: 1200px) {
+                                .absolute;
+                                left:50%;
+                                text-align:left;
                                 font-size: 20px;
                                 line-height: 60px;
-                                border-radius: 30px;
-                                padding: 0 60px;
-                                margin: 50px 0 0;
+                                border-radius: 0;
+                                border:none;
+                                background:@main;
+                                padding: 0 20px;
+                                width:260px;
+                                margin: 50px 0 0 -550px;
+                            }
+
+                            i {
+                                .none;
+
+                                @media all and (min-width: 1200px) {
+                                    .block;
+                                    .absolute;
+                                    right:10px;
+                                    top:20px;
+                                }
+
+
                             }
                         }
                     }
@@ -985,7 +1000,7 @@ body {
                 & > button {
                     .absolute;
                     z-index: 100;
-                    .rem(bottom, 120);
+                    .rem(bottom, 110);
                     .zero;
                     background: none;
                     border: none;
@@ -1025,18 +1040,32 @@ body {
             }
 
             section.news {
-                background: #2583C8;
+
+
+                @media all and (min-width: 1200px) {
+                    .relative;
+
+                    &::before {
+                        content:"";
+                        .absolute;
+                        left:50%;
+                        right:0;
+                        top:0;
+                        bottom:0;
+                        background:#efefef;
+                    }
+                }
 
                 .container {
                     .rem(padding, 20 10);
 
                     @media all and (min-width: 1200px) {
                         padding: 40px 0;
+                        min-height:345px;
                     }
 
                     h2 {
                         .relative;
-                        color: #fff;
                         .rem(font-size, 30);
                         .rem(margin, 0 0 10);
                         .light;
@@ -1055,7 +1084,6 @@ body {
 
                             i {
                                 .rem(font-size, 30);
-                                color: #fff;
                             }
                         }
                     }
@@ -1065,31 +1093,81 @@ body {
                         .mapazero;
                         .zero;
 
+                        @media all and (min-width: 1200px) {
+                            .relative;
+                            padding:0 0 0 600px;
+                        }
+
                         li {
                             .none;
                             .top;
 
                             @media all and (min-width: 1200px) {
-                                .inline-block;
-                                width: calc(~"(100% - 96px) / 5");
-                                margin-left: 24px;
+                                .block;
+                                margin-left: 30px;
+                                .zero;
                             }
+
+                            a {
+
+                                p.img {
+                                    .mapazero;
+                                    .none;
+                                    
+                                }
+
+                                h3 {
+                                    .rem(font-size, 16);
+                                    .rem(margin, 10 0 6);
+                                    word-break: keep-all;
+                                    line-height: 1.4;
+
+                                    @media all and (min-width: 1200px) {
+                                        .inline-block;
+                                        .hidden;
+                                        width:490px;
+                                        margin:0 0 14px;
+                                        font-weight:400;
+                                    }
+                                }
+
+                                i {
+                                    .rem(font-size, 14);
+                                    font-style: normal;
+
+                                    @media all and (min-width: 1200px) {
+                                        .inline-block;
+                                        .right;
+                                        .top;
+                                        width:80px;
+                                        margin:0 0 14px;
+                                        color:#999;
+                                    }
+                                }
+                            }
+
+
+
+
+
 
                             &:first-child {
                                 .block;
 
                                 @media all and (min-width: 1200px) {
-                                    .inline-block;
-                                    margin-left: 0;
+                                    width:600px;
                                 }
-                            }
 
-                            a {
                                 p.img {
                                     .mapazero;
+                                    .block;
 
                                     @media all and (min-width: 1200px) {
-                                        height: 122px;
+                                        .absolute;
+                                        left:0;
+                                        top:0;
+                                        width:280px;
+                                        height: 210px;
                                     }
 
                                     img {
@@ -1103,24 +1181,36 @@ body {
                                     }
                                 }
 
-                                h3 {
-                                    .rem(font-size, 16);
-                                    .rem(margin, 10 0 6);
-                                    color: #fff;
-                                    word-break: keep-all;
-                                    line-height: 1.4;
+                                @media all and (min-width: 1200px) {
+                                    .block;
+                                    .absolute;
+                                    left:0;
+                                    top:0;
+                                    margin-left: 0;
 
-                                    @media all and (min-width: 1200px) {
-                                        .hidden;
-                                        height: 44px;
+                                    h3 {
+                                        font-size:24px;
+                                        .rem(margin, 10 0 6);
+                                        word-break: keep-all;
+                                        line-height: 1.4;
+                                        padding:0 20px 0 300px;
+                                        margin:0;
+                                        width:auto;
+                                    }
+    
+                                    i {
+                                        font-size:14px;
+                                        font-style: normal;
+                                        padding:20px 20px 0 300px;
+                                        width:auto;
                                     }
                                 }
-
-                                i {
-                                    .rem(font-size, 14);
-                                    font-style: normal;
-                                }
                             }
+
+
+
+
+
                         }
                     }
                 }
@@ -1129,6 +1219,7 @@ body {
             section.business {
 
                 .rem(padding, 30 0);
+                background:@main;
 
                 @media all and (min-width: 1200px) {
                     padding: 80px 0;
@@ -1137,6 +1228,8 @@ body {
                 h2 {
                     .rem(font-size, 30);
                     .rem(margin, 0 0 50);
+                    font-weight:100;
+                    color:#fff;
 
                     @media all and (min-width: 1200px) {
                         font-size: 54px;
@@ -1171,6 +1264,7 @@ body {
                         }
 
                         a {
+                            color:#fff;
                             i {
                                 .rem(width, 127);
                                 .rem(height, 127);
@@ -1178,6 +1272,7 @@ body {
                                 .rem(border-radius, 50%);
                                 .rem(font-size, 60);
                                 background: #F2F2F2;
+                                color:#333;
 
                                 @media all and (min-width: 1200px) {
                                     width: 170px;
@@ -1188,6 +1283,7 @@ body {
 
                             h3 {
                                 .rem(font-size, 20);
+                                font-weight:100;
                             }
 
                             &:hover {
