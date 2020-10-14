@@ -174,6 +174,10 @@ $(window).resize(function(){
     viewMode();
 });
 
+
+$("div.support p.img").each(function() {
+  $(this).css("background", "url('" + $(this).find("img").attr("src") + "') no-repeat top / cover");
+});
   
 });
 
