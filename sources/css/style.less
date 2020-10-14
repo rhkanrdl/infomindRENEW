@@ -1725,7 +1725,7 @@ body {
                                 padding: 30px 30px 20px;
                                 margin: 0;
                                 width: 650px;
-                                height: 224px;
+                                height: 268px;
                             }
 
                             dt {
@@ -1735,6 +1735,12 @@ body {
                                     float: left;
                                     width: 146px;
                                 }
+
+                                &.long {
+                                    @media all and (min-width: 1200px) {
+                                        width: 172px;
+                                    }
+                                }
                             }
 
                             dd {
@@ -1743,6 +1749,12 @@ body {
 
                                 @media all and (min-width: 1200px) {
                                     margin: 0 0 6px 156px;
+                                }
+
+                                &.en {
+                                    @media all and (min-width: 1200px) {
+                                        margin: 0 0 6px 172px;
+                                    }
                                 }
                             }
                         }
@@ -1759,7 +1771,7 @@ body {
                             @media all and (min-width: 1200px) {
                                 .top;
                                 width: 550px;
-                                height: 224px;
+                                height: 268px;
 
                                 margin: 0;
                             }
