@@ -4827,73 +4827,75 @@ body {
 
                         div.support {
                             .relative;
-                            background: #F7F7F7;
                             .rem(margin-top, 60);
+                            .rem(padding-top, 50);
 
                             @media all and (min-width: 1200px) {
-                                margin-top: 90px;
+                                margin-top: 70px;
+                                padding-top: 70px;
                             }
     
                             h5 {
                                 .absolute;
-                                .rem(top, -16);
-                                left: 50%;
-                                transform: translate(-50%);
-                                .mapazero;
-                                .rem(width, 160);
-                                .rem(height, 32);
-                                .rem(line-height, 32);
-                                border-radius: 40px;
-                                background: @main;
-                                color: #fff;
+                                top: 0;
+                                margin: 0;
                                 .center;
-                                .rem(font-size, 14);
-                                .normal;
-                                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+                                width: 100%;
+                                .rem(height, 200);
+                                z-index: -99;
+                                .rem(font-size, 16);
+                                background: #F7F7F7;
+                                .rem(padding, 30);
 
                                 @media all and (min-width: 1200px) {
-                                    width: 300px;
-                                    height: 50px;
-                                    line-height: 50px;
-                                    font-size: 24px;
-                                    top: -24px; 
+                                     font-size: 28px;
+                                     height: 300px;
                                 }
+                            }
+
+                            p {
+                                .rem(font-size, 12);
+                                .rem(padding, 20);
+                                margin: 0;
+                                .center;
+
+                                @media all and (min-width: 1200px) {
+                                    font-size: 20px;
+                               }
                             }
 
                             ul {
                                 .mapazero;
                                 list-style: none;
-                                .rem(padding, 30 20);
+                                .rem(padding, 0 20 20 20);
 
                                 @media all and (min-width: 1200px) {
                                     width: 1100px;
                                     margin: 0 auto;
-                                    padding: 60px 0;
-
-                                    &::after {
-                                        .absolute;
-                                        top: 27px;
-                                        left: 50%;
-                                        margin-left: -1px;
-                                        content: "";
-                                        .block;
-                                        width: 2px;
-                                        height: 546px;
-                                        background: #e1e1e1;
-                                    }
+                                    padding: 0;
                                 }
 
                                 li {
-                                    .rem(margin-top, 20);
+                                    .rem(margin, 20 0);
 
-                                    @media all and (min-width: 1200px) {
-                                        margin-top: 0;
+                                    &:nth-child(1) {
+                                        margin: 0;
+
+                                        @media all and (min-width: 1200px) {
+                                            margin-right: 80px;
+                                        }
                                     }
 
-                                    &::after {
-                                        .block;
-                                        content: "";
-                                        clear: both;
+                                    &:nth-child(3) {
+
+                                        @media all and (min-width: 1200px) {
+                                            margin-right: 0;
+                                        }
+                                    }
+
+                                    @media all and (min-width: 1200px) {
+                                        .inline-block;
+                                        margin-right: 80px;
                                     }
 
                                     p.img {
@@ -4903,79 +4905,46 @@ body {
                                         width: 100%;
                                         .rem(height, 250);
                                         padding: 0 -25%;
-
+    
                                         @media all and (min-width: 1200px) {
-                                            width: 410px;
-                                            height: 220px;
+                                            width: 310px;
+                                            height: 200px;
                                         }
-
+    
                                         img {
                                             .none;
                                         }
                                     }
 
-                                    h6 {
-                                        .rem(font-size, 14);
-                                        .rem(margin, 20 0 8 0);
+                                    ul.quality-list {
+                                        padding: 0;
 
                                         @media all and (min-width: 1200px) {
-                                            font-size: 22px; 
-                                            width: 400px;
-                                            margin: 60px 290px 0 0;
-
-                                            &::before {
-                                                .absolute;
-                                                left: 50%;
-                                                margin-left: -11px;
-                                                z-index: 99;
-                                                content: "";
-                                                .block;
-                                                width: 18px;
-                                                height: 18px;
-                                                border-radius: 50%;
-                                                background: #f7f7f7;
-                                                border: 2px @main solid;
-                                            }
+                                            width: 310px;
                                         }
 
-                                        small {
-                                            .block;
-                                            .normal;
+                                        li {
+                                            .center;
                                             .rem(font-size, 12);
-                                            .rem(margin-top, 10);
+                                            margin: 0;
+                                            .rem(padding, 12 0);
+                                            border-bottom: 1px solid #ccc;
 
-                                            @media all and (min-width: 1200px) {
-                                                font-size: 19px; 
-                                            }
-                                        }
-                                    }
+                                            &:nth-child(1) {
+                                                color: @main;
+                                                .bold;
+                                                border-bottom: 2px solid @main;
 
-                                    &:nth-child(1) {
-
-                                        h6 {
-
-                                            @media all and (min-width: 1200px) {
-                                                float: left;
-
-                                                &::before {
-                                                    top: 150px;
+                                                @media all and (min-width: 1200px) {
+                                                    .block;
                                                 }
                                             }
-                                        }
-                                    }
-
-                                    &:nth-child(2) {
-
-                                        h6 {
 
                                             @media all and (min-width: 1200px) {
-                                                float: right;
-                                                width: 410px;
-                                                margin: 60px 0 0 250px;
-
-                                                &::before {
-                                                    top: 380px;
-                                                }
+                                                .left;
+                                                .block;
+                                                margin-right: 0;
+                                                font-size: 20px;
                                             }
                                         }
                                     }
@@ -4996,10 +4965,12 @@ body {
                                 color: @main;
                                 .rem(font-size, 18);
                                 .center;
+                                margin-top: 0;
 
                                 @media all and (min-width: 1200px) {
                                     font-size: 28px;
                                     .left;
+                                    margin: 40px 0;
                                 }
                             }
 
