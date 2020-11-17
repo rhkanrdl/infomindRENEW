@@ -178,6 +178,30 @@ $(window).resize(function(){
 $("div.support p.img").each(function() {
   $(this).css("background", "url('" + $(this).find("img").attr("src") + "') no-repeat top / cover");
 });
+
+$("div.block-chart button").click(function() {
+  $("p.chart-img").addClass("veiw");
+});
+
+$("div.block-chart button").click(function() {
+  $("button").addClass("none");
+});
+
+$("div.farm-chart button").click(function() {
+  $("p.chart-img").addClass("veiw");
+});
+
+$("div.farm-chart button").click(function() {
+  $("button").addClass("none");
+});
+
+$("div.duty-chart button").click(function() {
+  $("p.chart-img").addClass("veiw");
+});
+
+$("div.duty-chart button").click(function() {
+  $("button").addClass("none");
+});
   
 });
 

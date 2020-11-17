@@ -1587,7 +1587,7 @@ body {
                 h3 {
                     .rem(font-size, 28);
                     .rem(margin, 20 0 40);
-                    .bolder;
+                    .bold;
                     .center;
                     .relative;
 
@@ -3854,7 +3854,7 @@ body {
                                             }
                                         }
                                     }
-
+ 
                                     &:nth-child(2) {
  
                                         p {
@@ -4188,19 +4188,24 @@ body {
 
                             p.chart-img {
                                 .none;
-                                .hidden;
-                                .mapazero;
-                                .rem(height, 700);
+                                overflow: scroll;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                .rem(padding, 0 10);
+                                .rem(height, 890);
                                 .rem(margin-bottom, 50);
                                 
                                 @media all and (min-width: 1200px) {
                                     .block;
-                                    height: 840px;
+                                    .hidden;
+                                    width: 100%;
+                                    height: 850px;
+                                    padding: 0;
                                     margin-bottom: 60px;
                                 }
-        
-                                img {
-                                    .none;
+
+                                &.veiw {
+                                    .block;
                                 }
                             }
 
@@ -4212,7 +4217,7 @@ body {
                                 border-radius: 60px;
                                 .rem(width, 160);
                                 .rem(height, 34);
-                                .rem(font-size, 12);
+                                .rem(font-size, 14);
                                 .pointer;
                                 outline: none;
                                 .absolute;
@@ -4221,6 +4226,10 @@ body {
                                 .rem(margin-left, -80);
 
                                 @media all and (min-width: 1200px) {
+                                    .none;
+                                }
+
+                                &.none {
                                     .none;
                                 }
                             }
@@ -4312,7 +4321,7 @@ body {
                                         ul {
                                             .absolute;
                                             right: 21px;
-                                            top: 5px;
+                                            top: 66px;
                                         }
                                     }
                                 }
@@ -4330,7 +4339,7 @@ body {
                                         ul {
                                             .absolute;
                                             right: 55px;
-                                            top: 172px;
+                                            top: 234px;
                                         }
                                     }
                                 }
@@ -4400,6 +4409,7 @@ body {
                                         .inline-block;
                                         border: none;
                                         .left;
+                                        margin: 0;
                                     }
     
                                     li {
@@ -4414,6 +4424,10 @@ body {
                                         @media all and (min-width: 1200px) {
                                             font-size: 18px;
                                             .normal;
+                                            .left;
+                                            background: none;
+                                            margin: 0;
+                                            padding: 0;
                                         }
                                     }
                                 }
@@ -4617,20 +4631,24 @@ body {
 
                             p.chart-img {
                                 .none;
-                                .hidden;
-                                .mapazero;
-                                .rem(height, 700);
+                                overflow: scroll;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                .rem(padding, 0 10);
+                                .rem(height, 960);
                                 .rem(margin-bottom, 50);
                                 
                                 @media all and (min-width: 1200px) {
                                     .block;
+                                    .hidden;
                                     width: 100%;
-                                    height: 756px;
+                                    height: 940px;
+                                    padding: 0;
                                     margin-bottom: 60px;
                                 }
-        
-                                img {
-                                    .none;
+
+                                &.veiw {
+                                    .block;
                                 }
                             }
 
@@ -4642,7 +4660,7 @@ body {
                                 border-radius: 60px;
                                 .rem(width, 160);
                                 .rem(height, 34);
-                                .rem(font-size, 12);
+                                .rem(font-size, 14);
                                 .pointer;
                                 outline: none;
                                 .absolute;
@@ -4651,6 +4669,10 @@ body {
                                 .rem(margin-left, -80);
 
                                 @media all and (min-width: 1200px) {
+                                    .none;
+                                }
+
+                                &.none {
                                     .none;
                                 }
                             }
@@ -4983,19 +5005,24 @@ body {
 
                             p.chart-img {
                                 .none;
-                                .hidden;
-                                .mapazero;
-                                .rem(height, 700);
+                                overflow: scroll;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                .rem(padding, 0 10);
+                                .rem(height, 450);
                                 .rem(margin-bottom, 50);
                                 
                                 @media all and (min-width: 1200px) {
                                     .block;
-                                    height: 840px;
+                                    .hidden;
+                                    width: 100%;
+                                    height: 420px;
+                                    padding: 0;
                                     margin-bottom: 60px;
                                 }
-        
-                                img {
-                                    .none;
+
+                                &.veiw {
+                                    .block;
                                 }
                             }
 
@@ -5007,7 +5034,7 @@ body {
                                 border-radius: 60px;
                                 .rem(width, 160);
                                 .rem(height, 34);
-                                .rem(font-size, 12);
+                                .rem(font-size, 14);
                                 .pointer;
                                 outline: none;
                                 .absolute;
@@ -5016,6 +5043,10 @@ body {
                                 .rem(margin-left, -80);
 
                                 @media all and (min-width: 1200px) {
+                                    .none;
+                                }
+
+                                &.none {
                                     .none;
                                 }
                             }
