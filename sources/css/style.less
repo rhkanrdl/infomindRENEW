@@ -1,15 +1,15 @@
-// out: ./style.css, compress: true, sourceMap: false
+// out: ./style.css, compress: false, sourceMap: true
 
-// @import "rem.less";
-// @import "/wp/assets/source/css/normalize.css";
-// @import "/wp/assets/source/css/nanumsquare.css";
-// //Regular(400), Bold(700), Extra Bold(800), Light(300)
-// @import "/wp/assets/source/css/boxicons.css";
-
-
-
-@import "normalize.css";
 @import "rem.less";
+@import "/wp/assets/source/css/normalize.css";
+@import "/wp/assets/source/css/nanumsquare.css";
+//Regular(400), Bold(700), Extra Bold(800), Light(300)
+@import "/wp/assets/source/css/boxicons.css";
+
+
+
+// @import "normalize.css";
+// @import "rem.less";
 
 
 
@@ -21,8 +21,8 @@
 /* basic */
 @min-width: 320px;
 @myfont: "Noto Sans KR";
-@img-url: "../images";
-// @img-url: "/wp/assets/source/images";
+// @img-url: "../images";
+@img-url: "/wp/assets/source/images";
 
 
 @header-height: 100px;
@@ -1709,6 +1709,25 @@ body {
                             u {
                                 text-decoration: none;
                                 .block;
+                            }
+                        }
+
+                        a.btn {
+                            .block;
+                            margin:0 auto;
+                            background:#fff;
+                            .rem(width, 220);
+                            .rem(padding, 10 0);
+                            color:#333;
+                            .rem(font-size, 12);
+                            .rem(margin, 0 auto 20);
+                            border:2px solid #333;
+
+                            @media all and (min-width: 1200px) {
+                                width:280px;
+                                padding:10px 20px;
+                                font-size:22px;
+                                margin:0 auto 50px;
                             }
                         }
 
@@ -3767,7 +3786,7 @@ body {
 
                         div.suggest {
                             .rem(padding, 20 20 30 20);
-                            background: url(../images/bigdata-bg.jpg) no-repeat center 100%;
+                            background: url("@{img-url}//bigdata-bg.jpg") no-repeat center 100%;
                             background-size: cover;
 
                             @media all and (min-width: 1200px) {
@@ -3849,10 +3868,10 @@ body {
 
                                         p {
                                             &::before {
-                                                background: url(../images/list01-s.svg) no-repeat center 100%;
+                                                background: url("@{img-url}/list01-s.svg") no-repeat center 100%;
 
                                                 @media all and (min-width: 1200px) {
-                                                    background: url(../images/list01.svg) no-repeat center 100%;                                                
+                                                    background: url("@{img-url}/list01.svg") no-repeat center 100%;                                                
                                                 }
                                             }
                                         }
@@ -3862,10 +3881,10 @@ body {
  
                                         p {
                                             &::before {
-                                                background: url(../images/list02-s.svg) no-repeat center 100%;
+                                                background: url("@{img-url}/list02-s.svg") no-repeat center 100%;
 
                                                 @media all and (min-width: 1200px) {
-                                                    background: url(../images/list03.svg) no-repeat center 100%;                                                
+                                                    background: url("@{img-url}/list03.svg") no-repeat center 100%;                                                
                                                 }
                                             }
                                         }
@@ -3879,10 +3898,10 @@ body {
  
                                         p {
                                             &::before {
-                                                background: url(../images/list03-s.svg) no-repeat center 100%;
+                                                background: url("@{img-url}/list03-s.svg") no-repeat center 100%;
 
                                                 @media all and (min-width: 1200px) {
-                                                    background: url(../images/list02.svg) no-repeat center 100%;                                                
+                                                    background: url("@{img-url}/list02.svg") no-repeat center 100%;                                                
                                                 }
                                             }
                                         }
@@ -3892,10 +3911,10 @@ body {
  
                                         p {
                                             &::before {
-                                                background: url(../images/list04-s.svg) no-repeat center 100%;
+                                                background: url("@{img-url}/list04-s.svg") no-repeat center 100%;
 
                                                 @media all and (min-width: 1200px) {
-                                                    background: url(../images/list04.svg) no-repeat center 100%;                                                
+                                                    background: url("@{img-url}/list04.svg") no-repeat center 100%;                                                
                                                 }
                                             }
                                         }
@@ -3956,7 +3975,7 @@ body {
                                             .rem(width, 55);
                                             .rem(height, 60);
                                             .rem(margin, 20 0 8 0);
-                                            background: url(../images/bigdata-icon01.svg) no-repeat 100%;
+                                            background: url("@{img-url}/bigdata-icon01.svg") no-repeat 100%;
 
                                             @media all and (min-width: 1200px) {
                                                 margin-left: 7px;
@@ -3972,7 +3991,7 @@ body {
                                             .rem(width, 55);
                                             .rem(height, 70);
                                             .rem(margin, 20 0 8 0);
-                                            background: url(../images/bigdata-icon02.svg) no-repeat 100%;
+                                            background: url("@{img-url}/bigdata-icon02.svg") no-repeat 100%;
 
                                             @media all and (min-width: 1200px) {
                                                 margin-left: 7px;
@@ -3988,7 +4007,7 @@ body {
                                             .rem(width, 55);
                                             .rem(height, 60);
                                             .rem(margin, 20 0 8 0);
-                                            background: url(../images/bigdata-icon03.svg) no-repeat 100%;
+                                            background: url("@{img-url}/bigdata-icon03.svg") no-repeat 100%;
 
                                             @media all and (min-width: 1200px) {
                                                 margin-left: 7px;
@@ -4004,7 +4023,7 @@ body {
                                             .rem(width, 55);
                                             .rem(height, 60);
                                             .rem(margin, 20 0 8 0);
-                                            background: url(../images/bigdata-icon04.svg) no-repeat 100%;
+                                            background: url("@{img-url}/bigdata-icon04.svg") no-repeat 100%;
 
                                             @media all and (min-width: 1200px) {
                                                 margin-left: 17px;
@@ -4066,7 +4085,7 @@ body {
                                 font-size: 0;
                                 .rem(padding, 20 20 30 20);
                                 .rem(height, 350);
-                                background: url(../images/block-bg.jpg) no-repeat center 100%;
+                                background: url("@{img-url}/block-bg.jpg") no-repeat center 100%;
                                 background-size: cover;
 
                                 @media all and (min-width: 1200px) {
@@ -4129,7 +4148,7 @@ body {
                                         content: "";
                                         .rem(width, 52);
                                         .rem(height, 40);
-                                        background: url(../images/block-icon01.svg) no-repeat center 100%;
+                                        background: url("@{img-url}/block-icon01.svg") no-repeat center 100%;
                                         }
                                     }
 
@@ -4140,7 +4159,7 @@ body {
                                         content: "";
                                         .rem(width, 52);
                                         .rem(height, 48);
-                                        background: url(../images/block-icon02.svg) no-repeat center 100%;
+                                        background: url("@{img-url}/block-icon02.svg") no-repeat center 100%;
                                         }
                                     }
 
@@ -4151,7 +4170,7 @@ body {
                                         content: "";
                                         .rem(width, 52);
                                         .rem(height, 42);
-                                        background: url(../images/block-icon03.svg) no-repeat center 100%;
+                                        background: url("@{img-url}/block-icon03.svg") no-repeat center 100%;
                                         }
                                     }
 
@@ -4162,7 +4181,7 @@ body {
                                         content: "";
                                         .rem(width, 52);
                                         .rem(height, 42);
-                                        background: url(../images/block-icon04.svg) no-repeat center 100%;
+                                        background: url("@{img-url}/block-icon04.svg") no-repeat center 100%;
                                         }
                                     }
                                 }
@@ -4295,13 +4314,13 @@ body {
 
                             p.farm-img {
                                 font-size: 0;
-                                background: url(../images/farm-s.png) no-repeat center 100%;
+                                background: url("@{img-url}/farm-s.png") no-repeat center 100%;
                                 width: 100%;
                                 .rem(height, 190);
                                 .rem(margin-bottom, 20);
                                 
                                 @media all and (min-width: 1200px) {
-                                    background: url(../images/farm.png) no-repeat center 100%;
+                                    background: url("@{img-url}/farm.png") no-repeat center 100%;
                                     width: 502px;
                                     height: 395px;
                                     margin-left: 40px;
@@ -4732,7 +4751,7 @@ body {
                                 font-size: 0;
                                 .rem(padding, 20 20 30 20);
                                 .rem(height, 350);
-                                background: url(../images/duty-bg.jpg) no-repeat center 100%;
+                                background: url("@{img-url}/duty-bg.jpg") no-repeat center 100%;
                                 background-size: cover;
 
                                 @media all and (min-width: 1200px) {
@@ -4752,7 +4771,7 @@ body {
                                     font-size: 0;
                                     .rem(height, 230);
                                     .rem(margin, 20 0);
-                                    background: url(../images/duty-s.png) no-repeat center 100%;
+                                    background: url("@{img-url}/duty-s.png") no-repeat center 100%;
 
                                     @media all and (min-width: 1200px) {
                                         .absolute;
@@ -4760,7 +4779,7 @@ body {
                                         .mapazero;
                                         width: 425px;
                                         height: 380px;
-                                        background: url(../images/duty.png) no-repeat center 100%;
+                                        background: url("@{img-url}/duty.png") no-repeat center 100%;
                                     }
                                 }
 
@@ -4812,7 +4831,7 @@ body {
                                                 margin-right: 20px;
                                                 width: 37px;
                                                 height: 38px;
-                                                background: url(../images/duty-list.svg) no-repeat center 100%;
+                                                background: url("@{img-url}/duty-list.svg") no-repeat center 100%;
                                             }
                                         }
 
@@ -5229,7 +5248,7 @@ body {
 
                         div.process {
                             .rem(padding, 40 20 10 20);
-                            background: url(../images/web-bg.jpg) no-repeat center 100%;
+                            background: url("@{img-url}/web-bg.jpg") no-repeat center 100%;
                             background-size: cover;
 
                             @media all and (min-width: 1200px) {
@@ -5377,28 +5396,28 @@ body {
                                     &:nth-child(1) {
 
                                         &::before {
-                                            background: url(../images/web-icon01.svg) no-repeat 100%;
+                                            background: url("@{img-url}/web-icon01.svg") no-repeat 100%;
                                         }
                                     }
 
                                     &:nth-child(2) {
 
                                         &::before {
-                                            background: url(../images/web-icon02.svg) no-repeat 100%;
+                                            background: url("@{img-url}/web-icon02.svg") no-repeat 100%;
                                         }
                                     }
 
                                     &:nth-child(3) {
 
                                         &::before {
-                                            background: url(../images/web-icon03.svg) no-repeat 100%;
+                                            background: url("@{img-url}/web-icon03.svg") no-repeat 100%;
                                         }
                                     }
 
                                     &:nth-child(4) {
 
                                         &::before {
-                                            background: url(../images/web-icon04.svg) no-repeat 100%;
+                                            background: url("@{img-url}/web-icon04.svg") no-repeat 100%;
                                         }
                                     }
                                 }
