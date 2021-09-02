@@ -76,6 +76,7 @@ $(document).ready(function() {
         autoplay:true,
         speed: 1000,
         dots: true,
+        fade: true,
         infinite: true,
         nextArrow:$('.dm-next'),
         prevArrow:$('.dm-prev')
@@ -100,8 +101,7 @@ $(document).ready(function() {
     $('.slides').slick({
       autoplay:true,
       speed: 1000,
-      dots: true,
-      dots:false,
+      dots: false,
       infinite: true,
       nextArrow:$('.next'),
       prevArrow:$('.prev')
@@ -127,17 +127,17 @@ $(document).ready(function() {
 
 
 
-  getAllImagesDonePromise().then(function() { 
+  // getAllImagesDonePromise().then(function() { 
 
-    var $grids = $('.portfolio .list').masonry({
-      columnWidth: '.grid-item',
-      itemSelector: '.grid-item',
-      percentPosition: true,
-      gutter:'.gutter-sizer'
-    });
+  //   var $grids = $('.portfolio .list').masonry({
+  //     columnWidth: '.grid-item',
+  //     itemSelector: '.grid-item',
+  //     percentPosition: true,
+  //     gutter:'.gutter-sizer'
+  //   });
 
 
-  });
+  // });
 
 
   function viewMode() {

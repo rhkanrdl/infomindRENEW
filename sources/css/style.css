@@ -1,5 +1,5 @@
 @import "/wp/assets/source/css/normalize.css";
-@import "/wp/assets/source/css/nanumsquare.css";
+@import "/wp/assets/source/css/s-coredream.css";
 @import "/wp/assets/source/css/boxicons.css";
 @import "boxicons.css";
 /* basic */
@@ -220,7 +220,7 @@ html {
   font-size: 14px;
 }
 body {
-  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "S-CoreDream", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 .sr-only {
   position: absolute !important;
@@ -267,7 +267,7 @@ body .container {
 body header {
   text-align: center;
   position: absolute;
-  z-index: 800;
+  z-index: 10000;
   left: 0;
   right: 0;
   top: 0;
@@ -476,7 +476,7 @@ body header > .container button.allmenu i {
   }
   body header nav#main-menu > ul > li h2 a {
     color: #fff;
-    font-size: 18px;
+    font-size: 22px;
   }
   body header nav#main-menu > ul > li ul {
     max-height: 0;
@@ -710,7 +710,7 @@ body.main div#content section.main-issue {
 }
 @media all and (min-width: 1200px) {
   body.main div#content section.main-issue {
-    height: 70vh;
+    height: 80vh;
     min-height: 720px;
   }
 }
@@ -729,9 +729,8 @@ body.main div#content section.main-issue div.main-slider div {
 }
 @media all and (min-width: 1200px) {
   body.main div#content section.main-issue div.main-slider div {
-    height: 70vh;
+    height: 80vh;
     min-height: 720px;
-    text-align: left;
   }
 }
 body.main div#content section.main-issue div.main-slider div::before {
@@ -782,6 +781,7 @@ body.main div#content section.main-issue div.main-slider div p {
   font-size: 0.85714286rem;
   margin: 0;
   line-height: 1.4;
+  font-weight: 200;
 }
 @media all and (min-width: 1200px) {
   body.main div#content section.main-issue div.main-slider div p {
@@ -815,30 +815,20 @@ body.main div#content section.main-issue div.main-slider div a {
   body.main div#content section.main-issue div.main-slider div a {
     position: absolute;
     left: 50%;
-    text-align: left;
     font-size: 20px;
     line-height: 60px;
-    border-radius: 0;
-    border: none;
-    background: #0075bc;
+    border-radius: 60px;
     padding: 0 20px;
     width: 260px;
-    margin: 50px 0 0 -550px;
+    margin: 50px 0 0 -130px;
   }
 }
 body.main div#content section.main-issue div.main-slider div a i {
   display: none;
 }
-@media all and (min-width: 1200px) {
-  body.main div#content section.main-issue div.main-slider div a i {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 20px;
-  }
-}
 body.main div#content section.main-issue ul.slick-dots {
   position: relative;
+  z-index: 1000;
   bottom: 10rem;
   display: inline-block;
   margin: 0;
@@ -865,7 +855,7 @@ body.main div#content section.main-issue ul.slick-dots li.slick-active button {
 }
 body.main div#content section.main-issue > button {
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
   bottom: 7.85714286rem;
   font-size: 0;
   background: none;
@@ -905,26 +895,12 @@ body.main div#content section.main-issue button {
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-@media all and (min-width: 1200px) {
-  body.main div#content section.news {
-    position: relative;
-  }
-  body.main div#content section.news::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: #efefef;
-  }
-}
 body.main div#content section.news .container {
   padding: 1.42857143rem 0.71428571rem;
 }
 @media all and (min-width: 1200px) {
   body.main div#content section.news .container {
-    padding: 40px 0;
+    padding: 100px 0;
     min-height: 345px;
   }
 }
@@ -932,7 +908,7 @@ body.main div#content section.news .container h2 {
   position: relative;
   font-size: 2.14285714rem;
   margin: 0 0 0.71428571rem;
-  font-weight: 300;
+  font-weight: 800;
 }
 @media all and (min-width: 1200px) {
   body.main div#content section.news .container h2 {
@@ -957,110 +933,78 @@ body.main div#content section.news .container ul {
   font-size: 0;
 }
 @media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul {
-    position: relative;
-    padding: 0 0 0 600px;
+  body.main div#content section.news .container ul li {
+    display: inline-block;
+    width: calc((100% - 100px) / 6);
+    margin-right: 20px;
+  }
+  body.main div#content section.news .container ul li:last-child {
+    margin-right: 0;
   }
 }
-body.main div#content section.news .container ul li {
-  display: none;
-  vertical-align: top;
+body.main div#content section.news .container ul li a {
+  display: block;
+  padding-bottom: 0.71428571rem;
+  margin-bottom: 0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul li {
-    display: block;
-    margin-left: 30px;
-    font-size: 0;
+  body.main div#content section.news .container ul li a {
+    margin: 0;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
   }
 }
 body.main div#content section.news .container ul li a p.img {
-  margin: 0;
-  padding: 0;
   display: none;
+  margin: 0 0 0.71428571rem;
+}
+@media all and (min-width: 1200px) {
+  body.main div#content section.news .container ul li a p.img {
+    display: block;
+    width: 100%;
+    height: 254px;
+  }
+}
+body.main div#content section.news .container ul li a p.img img {
+  width: 100%;
+}
+@media all and (min-width: 1200px) {
+  body.main div#content section.news .container ul li a p.img img {
+    display: none;
+  }
 }
 body.main div#content section.news .container ul li a h3 {
   font-size: 1.14285714rem;
-  margin: 0.71428571rem 0 0.42857143rem;
+  margin: 0 0 5px;
   word-break: keep-all;
+  font-weight: 400;
   line-height: 1.4;
 }
 @media all and (min-width: 1200px) {
   body.main div#content section.news .container ul li a h3 {
-    display: inline-block;
+    font-weight: 600;
+    padding: 10px;
+    height: 56px;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    width: 490px;
-    margin: 0 0 14px;
-    font-weight: 400;
+    text-overflow: ellipsis;
   }
 }
 body.main div#content section.news .container ul li a i {
   font-size: 1rem;
   font-style: normal;
+  color: #999;
 }
-@media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul li a i {
-    display: inline-block;
-    text-align: right;
-    vertical-align: top;
-    width: 80px;
-    margin: 0 0 14px;
-    color: #999;
-  }
-}
-body.main div#content section.news .container ul li:first-child {
+body.main div#content section.news .container ul li.first a p.img {
   display: block;
 }
-@media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul li:first-child {
-    width: 600px;
-  }
-}
-body.main div#content section.news .container ul li:first-child p.img {
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-@media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul li:first-child p.img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 280px;
-    height: 210px;
-  }
-}
-body.main div#content section.news .container ul li:first-child p.img img {
-  width: 100%;
-  height: auto;
-}
-@media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul li:first-child p.img img {
-    display: none;
-  }
-}
-@media all and (min-width: 1200px) {
-  body.main div#content section.news .container ul li:first-child {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-left: 0;
-  }
-  body.main div#content section.news .container ul li:first-child h3 {
-    font-size: 24px;
-    margin: 0.71428571rem 0 0.42857143rem;
-    word-break: keep-all;
-    line-height: 1.4;
-    padding: 0 20px 0 300px;
-    margin: 0;
-    width: auto;
-  }
-  body.main div#content section.news .container ul li:first-child i {
-    font-size: 14px;
-    font-style: normal;
-    padding: 20px 20px 0 300px;
-    width: auto;
-  }
+body.main div#content section.news .container ul li.first h3 {
+  font-weight: 600;
 }
 body.main div#content section.business {
   padding: 2.14285714rem 0;
@@ -1275,7 +1219,7 @@ body.sub div#content section.sub-header .container ul.sub-menu {
     font-size: 0;
     position: absolute;
     right: 30px;
-    top: 24px;
+    top: 21px;
   }
   body.sub div#content section.sub-header .container ul.sub-menu li {
     display: inline-block;
@@ -1303,7 +1247,7 @@ body.sub div#content section.sub-header.subimage {
 }
 @media all and (min-width: 1200px) {
   body.sub div#content section.sub-header.subimage {
-    height: 420px;
+    height: 540px;
   }
 }
 body.sub div#content section.sub-header.subimage::after {
@@ -1393,7 +1337,7 @@ body.sub div#content section.sub-content h3 {
 @media all and (min-width: 1200px) {
   body.sub div#content section.sub-content h3 {
     font-size: 55px;
-    margin: 40px 0 50px;
+    margin: 100px 0 80px;
   }
 }
 body.sub div#content section.sub-content h3::after {
@@ -1642,6 +1586,14 @@ body.sub div#content section.sub-content.infomind .container a.ceo::after {
     background: url("/wp/assets/source/images/ceo-img.png") no-repeat center / 100% auto;
   }
 }
+body.sub div#content section.sub-content.ceo .container {
+  padding-bottom: 2.14285714rem;
+}
+@media all and (min-width: 1200px) {
+  body.sub div#content section.sub-content.ceo .container {
+    padding-bottom: 80px;
+  }
+}
 body.sub div#content section.sub-content.ceo .container h4 {
   text-align: center;
   position: relative;
@@ -1767,6 +1719,9 @@ body.sub div#content section.sub-content.history .container dl dd {
   body.sub div#content section.sub-content.history .container dl dd {
     margin: 0 0 20px;
   }
+}
+body.sub div#content section.sub-content.history .container dl dd p {
+  margin: 0;
 }
 @media all and (min-width: 1200px) {
   body.sub div#content section.sub-content.history .container dl:nth-of-type(odd) dd {
@@ -4974,92 +4929,39 @@ body.sub div#content section.sub-content.portfolio .container ul.list li.gutter-
 }
 body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item {
   font-size: 1rem;
-  width: calc(50% - 10px);
   margin: 0 0 1.42857143rem;
-  float: left;
-}
-@media all and (min-width: 1200px) {
-  body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item {
-    width: calc((100% - 80px) / 3);
-    margin: 0 0 40px;
-    border-radius: 0;
-    border-bottom: 2px solid #000;
-    overflow: hidden;
-  }
+  text-align: center;
 }
 body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a {
-  font-size: 0;
   display: block;
 }
 body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a p.img {
-  display: inline-block;
-  width: 100%;
-  border-radius: 0.71428571rem;
-  overflow: hidden;
-}
-@media all and (min-width: 1200px) {
-  body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a p.img {
-    border-radius: 0;
-  }
-}
-body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a p.img img {
-  max-width: 100%;
+  display: none;
 }
 body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a h4 {
-  font-weight: 300;
-  font-size: 0.78571429rem;
-  margin: 0.28571429rem 0 0;
-  color: #ccc;
+  font-size: 1.14285714rem;
+  margin: 0 0 1.42857143rem;
+  color: #fff;
+  font-weight: 600;
+  word-break: keep-all;
 }
 @media all and (min-width: 1200px) {
   body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a h4 {
-    margin: 0;
-    font-weight: 700;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    font-size: 14px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    height: 100%;
-    max-height: 40px;
-    text-align: center;
-    color: #ccc;
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    -ms-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-    word-break: keep-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-size: 20px;
+    margin: 0 0 30px;
   }
 }
+body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a h4 small {
+  display: block;
+  margin: 0.71428571rem 0 0;
+  font-size: 0.85714286rem;
+  font-weight: 400;
+  color: #999;
+}
 @media all and (min-width: 1200px) {
-  body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a:hover h4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: -webkit-flex;
-    -webkit-align-item: center;
-    -webkit-justify-content: center;
-    background: rgba(255, 255, 255, 0.9);
-    height: 100%;
-    max-height: 1000px;
+  body.sub div#content section.sub-content.portfolio .container ul.list li.grid-item a h4 small {
     font-size: 16px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    color: #222;
-    overflow: normal;
-    white-space: normal;
+    margin: 10px 0 0;
   }
 }
 body.sub div#content section.sub-content.portfolio .container div.portfolio-head h4 {
@@ -5070,7 +4972,9 @@ body.sub div#content section.sub-content.portfolio .container div.portfolio-head
 }
 @media all and (min-width: 1200px) {
   body.sub div#content section.sub-content.portfolio .container div.portfolio-head h4 {
+    margin: 0 0 100px;
     font-size: 32px;
+    font-weight: 500;
   }
 }
 body.sub div#content section.sub-content.portfolio .container div.portfolio-head h4 small {
@@ -5083,49 +4987,76 @@ body.sub div#content section.sub-content.portfolio .container div.portfolio-head
 }
 @media all and (min-width: 1200px) {
   body.sub div#content section.sub-content.portfolio .container div.portfolio-head h4 small {
-    margin: 16px 0 0;
+    margin: 10px 0 0;
     font-size: 18px;
   }
 }
-body.sub div#content section.sub-content.portfolio .container div.image {
+body.sub div#content section.sub-content.portfolio .container div.conbox {
+  position: relative;
+}
+@media all and (min-width: 1200px) {
+  body.sub div#content section.sub-content.portfolio .container div.conbox {
+    margin: 40px 0 40px;
+  }
+}
+body.sub div#content section.sub-content.portfolio .container div.conbox div.image {
   margin: 0 -0.71428571rem 1.42857143rem;
 }
 @media all and (min-width: 1200px) {
-  body.sub div#content section.sub-content.portfolio .container div.image {
+  body.sub div#content section.sub-content.portfolio .container div.conbox div.image {
     margin: 0 0 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
-body.sub div#content section.sub-content.portfolio .container div.image img {
+body.sub div#content section.sub-content.portfolio .container div.conbox div.image img {
   width: 100%;
 }
-body.sub div#content section.sub-content.portfolio .container h5 {
+@media all and (min-width: 1200px) {
+  body.sub div#content section.sub-content.portfolio .container div.conbox div.image img {
+    width: 500px;
+    height: auto;
+  }
+}
+body.sub div#content section.sub-content.portfolio .container div.conbox h5 {
   font-size: 1.14285714rem;
   font-weight: 800;
   margin: 0 0 0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body.sub div#content section.sub-content.portfolio .container h5 {
+  body.sub div#content section.sub-content.portfolio .container div.conbox h5 {
     font-size: 24px;
   }
 }
-body.sub div#content section.sub-content.portfolio .container div.text {
+body.sub div#content section.sub-content.portfolio .container div.conbox div.text {
   margin: 0 0 1.42857143rem;
 }
-body.sub div#content section.sub-content.portfolio .container div.text p {
+@media all and (min-width: 1200px) {
+  body.sub div#content section.sub-content.portfolio .container div.conbox div.text {
+    padding-right: 550px;
+  }
+}
+body.sub div#content section.sub-content.portfolio .container div.conbox div.text p {
   margin: 0;
   padding: 0 0 0.28571429rem;
 }
-body.sub div#content section.sub-content.portfolio .container dl {
+body.sub div#content section.sub-content.portfolio .container div.conbox dl {
   margin: 0 0 1.42857143rem;
   padding: 1.42857143rem 0.71428571rem 1rem;
   border-top: 2px solid #333;
   border-bottom: 1px solid #333;
 }
-body.sub div#content section.sub-content.portfolio .container dl dt {
+@media all and (min-width: 1200px) {
+  body.sub div#content section.sub-content.portfolio .container div.conbox dl {
+    margin-right: 550px;
+  }
+}
+body.sub div#content section.sub-content.portfolio .container div.conbox dl dt {
   font-weight: 800;
   float: left;
 }
-body.sub div#content section.sub-content.portfolio .container dl dd {
+body.sub div#content section.sub-content.portfolio .container div.conbox dl dd {
   margin-left: 4.28571429rem;
   margin-bottom: 0.42857143rem;
 }
